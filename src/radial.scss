@@ -1,0 +1,11 @@
+svg {
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  transform: rotate(-90deg);
+}
+
+svg circle {
+  transition: stroke-dashoffset 1s linear;
+  stroke: red;
+}
