@@ -1,0 +1,9 @@
+/* Examples of modifiers than you can create*/
+.radial--blue .radial-circle {
+  stroke: blue; }
+
+.radial--lazy .radial-circle {
+  -ms-transition: stroke-dashoffset 5s linear;
+  -webkit-transition: stroke-dashoffset 5s linear;
+  -moz-transition: stroke-dashoffset 5s linear;
+  transition: stroke-dashoffset 5s linear; }

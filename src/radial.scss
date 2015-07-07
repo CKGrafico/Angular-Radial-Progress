@@ -1,11 +1,12 @@
-svg {
-  width: 200px;
-  height: 200px;
-  padding: 10px;
+.radial {
+  
+}
+
+.radial-svg {
   transform: rotate(-90deg);
 }
 
-svg circle {
-  transition: stroke-dashoffset 1s linear;
+.radial-circle {
   stroke: red;
+  transition: stroke-dashoffset 1s linear;
 }
