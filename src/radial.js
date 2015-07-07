@@ -17,7 +17,6 @@
 		  max: '@',
 	      r: '@',
 	      stroke: '@',
-		  to: '@',
 	      value: '@'
 	    },
         controller: ['$scope', '$element', function($scope, $element){
