@@ -48,12 +48,12 @@
 				$timeout(animate, scope.delay)
 			}
 		},
-	    transclude: true,
 		templateUrl: function(elem, attrs) {
-           return attrs.templateUrl || '../src/radial.html';
-       }
+			return attrs.templateUrl || '../src/radial.html';
+		},
+		transclude: true,
 	  };
 	}];
 	
-	angular.module('testApp').directive('radial', radialDirective);
+	angular.module('radial', []).directive('radial', radialDirective);
 })(angular);

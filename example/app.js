@@ -1,3 +1,3 @@
 (function(angular) {
-	angular.module('testApp', []);
+	angular.module('testApp', ['radial']);
 })(angular);
