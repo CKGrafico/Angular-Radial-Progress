@@ -49,7 +49,7 @@
 			}
 		},
 		templateUrl: function(elem, attrs) {
-			return attrs.templateUrl || '../src/radial.html';
+			return attrs.template || '../src/radial.html';
 		},
 		transclude: true,
 	  };
