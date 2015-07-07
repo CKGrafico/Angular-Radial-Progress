@@ -1,0 +1,1 @@
+.radial{display:inline-block;position:relative}.radial-svg{transform:rotate(-90deg)}.radial-circle{stroke:#000;transition:stroke-dashoffset 1s linear}.radial-content{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}

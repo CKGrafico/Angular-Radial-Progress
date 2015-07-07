@@ -8,7 +8,7 @@
 		return parseInt(value, 10);
 	}
 	
-	var radialDirective = function($timeout) {
+	var radialDirective = ['$timeout', function($timeout) {
 	  return {
 	    restrict: 'E',
 	    scope: {
@@ -20,7 +20,10 @@
 		  to: '@',
 	      value: '@'
 	    },
-        controller: function($scope, $element){
+        controller: ['$scope', '$element', function($scope, $element){
+			// Add radial class
+			$element.addClass('radial');
+			
 			// Default values definitions
 			$scope.delay = checkValue($scope.delay, 10);
 			$scope.from = checkValue($scope.from, 0);
@@ -33,8 +36,8 @@
  			$scope.size = $scope.r*2 + $scope.stroke;
 			$scope.perimeter = Math.PI*2*$scope.r;
 			$scope.offset = (($scope.max-$scope.from)/$scope.max)*$scope.perimeter;
-        },
-		link: function(scope, element, attrs, ctrl) {
+        }],
+		link: function(scope) {
 			// Animate or not depending of the delay
 			var animate = function() {
 				scope.offset = ((scope.max-scope.value)/scope.max)*scope.perimeter;
@@ -48,7 +51,7 @@
 	    transclude: true,
 	    templateUrl: '../src/radial.html'
 	  };
-	};
+	}];
 	
 	angular.module('testApp').directive('radial', radialDirective);
 })(angular);

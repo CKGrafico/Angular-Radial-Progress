@@ -1,5 +1,6 @@
 .radial {
-  
+  display: inline-block;
+  position: relative;
 }
 
 .radial-svg {
@@ -7,6 +8,13 @@
 }
 
 .radial-circle {
-  stroke: red;
+  stroke: black;
   transition: stroke-dashoffset 1s linear;
+}
+
+.radial-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

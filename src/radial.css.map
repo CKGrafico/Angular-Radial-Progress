@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAIA,WAAY;EACV,SAAS,EAAE,cAAc;;AAG3B,cAAe;EACb,MAAM,EAAE,GAAG;EACX,UAAU,EAAE,2BAA2B",
-"sources": ["radial.scss"],
-"names": [],
-"file": "radial.css"
-}
