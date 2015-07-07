@@ -49,7 +49,9 @@
 			}
 		},
 	    transclude: true,
-	    templateUrl: '../src/radial.html'
+		templateUrl: function(elem, attrs) {
+           return attrs.templateUrl || '../src/radial.html';
+       }
 	  };
 	}];
 	
