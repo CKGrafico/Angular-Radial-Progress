@@ -12,10 +12,10 @@
 		<radial>1</radial>
 		
 		<!-- 65/100 -->
-		<radial value="65">2</radial>
+		<radial to="65">2</radial>
 		
 		<!-- 65/83 -->
-		<radial value="65" max="83">3</radial>
+		<radial to="65" max="83">3</radial>
 		
 		<!-- Radial size -->
 		<radial r="20">4</radial>
@@ -39,8 +39,8 @@
 		<radial template="custom.html">10</radial>
 		
 		<!-- Custom animation time and styles examples -->
-	    <radial class="radial--blue" delay="0" value="25" max="30" r="30" stroke="2">A</radial>
-	    <radial class="radial--lazy" value="25" max="30" r="30" stroke="2">B</radial>
+	    <radial class="radial--blue" delay="0" to="25" max="30" r="30" stroke="2">A</radial>
+	    <radial class="radial--lazy" to="25" max="30" r="30" stroke="2">B</radial>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 		<script src="app.js"></script>
@@ -49,7 +49,7 @@
 		<!-- Custom template -->
 		<script type="text/ng-template" id="custom.html">
 		    <svg class="radial-svg" ng-attr-width="{{size}}" ng-attr-height="{{size}}">
-		      <circle class="radial-circle" stroke-width="{{stroke}}" ng-attr-r="{{r}}" ng-attr-cx="{{r}}" ng-attr-cy="{{r}}" fill="#DDD" stroke-dasharray="{{perimeter}}" stroke-dashoffset="0" style="stroke-dashoffset:{{offset}}px"></circle>
+		      <circle class="radial-circle" stroke-width="{{stroke}}" ng-attr-r="{{r}}" ng-attr-cx="{{r/2}}" ng-attr-cy="{{r/2}}" fill="#DDD" stroke-dasharray="{{perimeter}}" stroke-dashoffset="0" style="stroke-dashoffset:{{offset}}px"></circle>
 		    </svg>
 		    <div class="radial-content" ng-transclude></div>
 		  </script>

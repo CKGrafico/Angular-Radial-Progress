@@ -17,7 +17,7 @@
 		  max: '@',
 	      r: '@',
 	      stroke: '@',
-	      value: '@'
+	      to: '@'
 	    },
         controller: ['$scope', '$element', function($scope, $element){
 			// Add radial class
@@ -29,17 +29,17 @@
 			$scope.max = checkValue($scope.max, 100);
 			$scope.r = checkValue($scope.r, 50);
 			$scope.stroke = checkValue($scope.stroke, 2);
-			$scope.value = checkValue($scope.value, 25);
+			$scope.to = checkValue($scope.value, 25);
 			
 			// Calculate other values
- 			$scope.size = $scope.r*2 + $scope.stroke;
+ 			$scope.size = ($scope.r + $scope.stroke)*2;
 			$scope.perimeter = Math.PI*2*$scope.r;
 			$scope.offset = (($scope.max-$scope.from)/$scope.max)*$scope.perimeter;
         }],
 		link: function(scope) {
 			// Animate or not depending of the delay
 			var animate = function() {
-				scope.offset = ((scope.max-scope.value)/scope.max)*scope.perimeter;
+				scope.offset = ((scope.max-scope.to)/scope.max)*scope.perimeter;
 			}
 			if(scope.delay < 10) {
 				animate();
